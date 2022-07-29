@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Taviraj:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* table of contents
+
+1. global styles
+
+2. homepage
+  2.1 header
+  2.2 articles
+  2.3 footer
+
+3. post
+  3.1 header
+  3.2 main section
+
+4. aside
+  4.1 about section
+
+5. footer
+
+*/
+
+/* 1. global styles */
+
+html {  
+	box-sizing: border-box;   
+	font-size: 62.5%;
+}
+*, *::before, *::after {  
+	box-sizing: inherit;
+	text-decoration: none;
+	margin: 0;  
+	padding: 0;
+}
+body {
+	font-size: 1.6rem;
+  font-family: 'Taviraj', serif;
+}
+:root {
+  --blue-tag: dodgerblue;
+  --green-tag: limegreen;
+  --grey: darkgrey;
+}
+
+
+
+/* 2. homepage */
+
+.blog__container {
+  width: 60vw;
+  margin: 0 auto;
+}
+
+/* 2.1 header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__subscribe {
+  color: var(--grey);
+  text-decoration: underline;
+}
+
+.header__title {
+  text-decoration: underline;
+  color: #555;
+}
+.header__search {
+  width: 2rem;
+  height: auto;
+}
+
+/* 2.2 articles */
+.article__container {
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.card__tag--blue {
+  color: var(--blue-tag);
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.card__tag--green {
+  color: var(--green-tag);
+  font-weight: bold;
+  font-family: sans-serif;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  border: 5px solid lightgrey;
+  padding: 2rem;
+}
+
+.card__date {
+  color: grey;
+  font-family: sans-serif;
+}
+
+.card__paragraph {
+  font-family: sans-serif;
+  padding: 1rem 0;
+}
+
+.card__continue {
+  text-decoration: underline;
+}
+
+/* 2.3 footer */
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+  margin: 2rem 0;
+  background-color: whitesmoke;
+  border-top: 2px solid lightgrey;
+}
+
+.footer__info--link, .footer__link {
+  text-decoration: underline;
+}
+
+/* 3. post */
+
+.blog__post-container {
+  display: grid;
+  grid-template: 10vh 1fr/ 2fr 1fr;
+  gap: 4rem;
+  width: 60vw;
+  margin: 0 auto;
+}
+
+.post__link {
+  text-decoration: underline;
+  color: var(--blue-tag);
+}
+
+.post__container p {
+  padding: 1rem 0;
+}
+
+/* 3.1 header */
+.post__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-column-end: span 2;
+}
+
+/* 3.2 main section */
+.post__title {
+  font-size: 4rem;
+}
+
+.post__date {
+ color: var(--grey);
+}
+
+.post__summary {
+  border-bottom: 2px solid lightgrey;
+}
+
+.border {
+  border: 2px solid lightgrey;
+}
+
+.post__heading {
+  font-size: 3rem;
+}
+
+.post__sub-heading {
+  font-size: 2.5rem;
+}
+
+.post__code {
+  border: 2px solid lightgrey;
+  font-weight: bold;
+}
+
+.post__list-item {
+  margin: 0 5rem;
+}
+
+.post__btn-container {
+  margin-top: 5rem;
+}
+
+.post__btn {
+  font-family: sans-serif;
+  color: lightgrey;
+  padding: 1rem;
+  border: 2px solid lightgrey;
+  border-radius: 30px;
+}
+.--prev {
+  color: var(--blue-tag);
+  border: 2px solid var(--blue-tag);
+}
+
+/* 4. aside */
+
+.about__title, .archives__title, .elsewhere__title {
+  font-size: 2.5rem;
+}
+
+.about__container, .archives__container, .elsewhere__container {
+  margin: 2rem 0;
+}
+
+.archives__list-item, .elsewhere__list-item {
+  list-style-type: none;
+}
+
+/* 3.3 about section */
+.about__container {
+  background-color: whitesmoke;
+  padding: 2rem;
+}
+
+/* 5. footer */
+.post__footer {
+  display: flex;
+  grid-column-end: span 2;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+  margin: 2rem 0;
+  background-color: whitesmoke;
+  border-top: 2px solid lightgrey;
+
+}
